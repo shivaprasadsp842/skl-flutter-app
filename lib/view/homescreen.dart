@@ -16,6 +16,8 @@ import '../network/services.dart';
 import '../video.dart';
 import '../allchats/chatPage.dart';
 import '../wallet/myWallet.dart';
+import 'loginscreen.dart';
+import 'myprofile.dart';
 
 
 final Services _services = Services();
@@ -382,20 +384,21 @@ class _HomeViewState extends State<HomeView> {
         ListView(
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(0),
               children: List.generate(
                   searchList.length,
                       (index) => new SingleChildScrollView(
                     child: Card(
-                      margin: const EdgeInsets.all(12),
-                      shadowColor: Colors.blueGrey,
-                      elevation: 4,
-                      color: const Color.fromRGBO(64, 75, 96, .9),
+                      margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                     // shadowColor: Colors.blueGrey,
+                      elevation: 0,
+                     // color: const Color.fromRGBO(64, 75, 96, .9),
                       shape: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: const BorderSide(color: Colors.white)),
+                          borderSide: const BorderSide(color: Colors.transparent)
+                      ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(0.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -457,24 +460,28 @@ class _HomeViewState extends State<HomeView> {
                                               SizedBox(
                                                 height: 4,
                                               ),
-                                              Text(searchList[index].name.toString(),
+                                              // Text(searchList[index].name.toString(),
+                                              //   style: TextStyle(fontFamily: 'Inter',
+                                              //       fontSize: 20, fontWeight: FontWeight.w700),
+                                              // ),
+                                              Text('Rajiv Talreja',
                                                 style: TextStyle(fontFamily: 'Inter',
-                                                    fontSize: 20, fontWeight: FontWeight.w900),
+                                                    fontSize: 20, fontWeight: FontWeight.w700),
                                               ),
                                               SizedBox(
-                                                height: 9,
+                                                height: 5,
                                               ),
                                               Text('Business Coach',
                                                 style: TextStyle( fontFamily: 'Inter',
-                                                    fontSize: 15,  fontWeight: FontWeight.w700
+                                                    fontSize: 15,  fontWeight: FontWeight.w600
                                                 ),
                                               ),
                                               SizedBox(
-                                                height: 7,
+                                                height: 5,
                                               ),
                                               Text('GDF-638',
                                                 style: TextStyle(color: Color(0xFF5B5A5A), fontFamily: 'Inter',
-                                                  fontSize: 15,  fontWeight: FontWeight.bold,
+                                                  fontSize: 15,  fontWeight: FontWeight.w600,
                                                 ),
                                               ),
                                               SizedBox(
@@ -763,24 +770,26 @@ class _HomeViewState extends State<HomeView> {
             //     Navigator.pop(context);
             //   },
             // ),
-            // ListTile(
-            //   iconColor: Colors.black,
-            //   leading: Icon(Icons.shopping_cart),
-            //   title: const Text(
-            //     'My Orders',
-            //     style: TextStyle(
-            //       color: Colors.black54,
-            //       fontWeight: FontWeight.bold,
-            //       fontSize: 16,
-            //     ),
-            //   ),
-            //   onTap: () {
-            //     // Update the state of the app
-            //     // ...
-            //     // Then close the drawer
-            //     Navigator.pop(context);
-            //   },
-            // ),
+            ListTile(
+              iconColor: Colors.black,
+              leading: Icon(Icons.person_sharp),
+              title: const Text(
+                'My Profile',
+                style: TextStyle(
+                    color: Color(0xFF6E7983),
+                    fontWeight: FontWeight.w700,
+                    fontSize: 15,
+                    fontFamily: 'Inter'
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => new MyProfile()),
+                );
+              },
+            ),
             ListTile(
               iconColor: Colors.black,
               leading: Icon(Icons.account_balance_wallet),
@@ -871,6 +880,31 @@ class _HomeViewState extends State<HomeView> {
                 Navigator.pop(context);
               },
             ),
+            ListTile(
+              iconColor: Colors.black,
+              leading:  ImageIcon(
+                AssetImage("assets/logout.png"),
+                color: Colors.black,
+                size: 20,
+              ),
+              title: const Text(
+                'Logout',
+                style: TextStyle(
+                    color: Color(0xFF6E7983),
+                    fontWeight: FontWeight.w700,
+                    fontSize: 15,
+                    fontFamily: 'Inter'
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginView()),
+                );
+              },
+            ),
+
+
           ],
         ),
       ),

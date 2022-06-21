@@ -103,12 +103,15 @@ class _ChatRulesState extends State<ChatRules> {
         ),
 
         actions: [
-Card(
+    Container(
+      height: 25,
+      child: Card(
   color: Color(0xE5E5E5E5),
 
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(10.0, 17, 10, 10),
-        child:  Text('00 : 00 : 00', style: TextStyle(fontWeight: FontWeight.bold),),
+        padding: const EdgeInsets.fromLTRB(10.0, 13, 10, 5),
+        child:  Text('00:00:00', style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Inter', fontSize: 15),),
+),
 ),
 ),
 
@@ -140,12 +143,14 @@ Card(
       ),
       body: SlidingUpPanel(
         // backdropEnabled: true,
+        minHeight: MediaQuery.of(context).size.height*0.6,
+        maxHeight: MediaQuery.of(context).size.height*0.85,
         borderRadius: BorderRadius.only(
         topLeft: Radius.circular(20.0),
     topRight: Radius.circular(20.0)),
     panel: Container(
-    padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-    height: MediaQuery.of(context).size.height*0.5,
+    padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+   height: MediaQuery.of(context).size.height*0.5,
     width:double.infinity,
     decoration: BoxDecoration(
     border: Border.all(color: Colors.white70, width: 1),
@@ -165,7 +170,7 @@ Card(
              style: TextStyle(
                fontSize: 15,
                color: Colors.black,
-               fontWeight: FontWeight.w700,
+               fontWeight: FontWeight.w900,
                fontFamily: 'Inter'
              ),
            ),
@@ -177,18 +182,21 @@ Card(
 
           Padding(
 
-            padding: const EdgeInsets.fromLTRB(0.0, 10, 10, 10),
+            padding: const EdgeInsets.fromLTRB(0.0, 10, 5, 5),
             child:  Container(
-              padding: const EdgeInsets.fromLTRB(05.0, 10, 10, 10),
+              padding: const EdgeInsets.fromLTRB(05.0, 5, 5, 5),
 
               child: Column(
                 children: <Widget>[
+
+
+
                   new ListTile(
                     leading: new MyBullet(),
                     title: new Text('User shall refrain from raising any personal queries or advice on the Consult platform which are not related to a specific topic mentioned. ',
                       style: TextStyle(
                           color:Colors.black,fontFamily: 'Inter',
-                          fontSize:13,fontWeight: FontWeight.w400
+                          fontSize:15,fontWeight: FontWeight.w500
                       ),
                     ),
                   ),
@@ -196,7 +204,7 @@ Card(
                     leading: new MyBullet(),
                     title: new Text('User understands and agrees to provide accurate information and will not use the Consult platform for any acts that are considered to be illegal in nature.',   style: TextStyle(
                         color:Colors.black,fontFamily: 'Inter',
-                        fontSize:13,fontWeight: FontWeight.w400
+                        fontSize:15,fontWeight: FontWeight.w500
                     ),),
                   ),
                   new ListTile(
@@ -204,17 +212,25 @@ Card(
                     title: new Text('Users shall not use abusive language on the Consult platform.',
                       style: TextStyle(
                           color:Colors.black,fontFamily: 'Inter',
-                          fontSize:13,fontWeight: FontWeight.w400
+                          fontSize:15,fontWeight: FontWeight.w500
                       ),),
                   ),
-                  // new ListTile(
-                  //   leading: new MyBullet(),
-                  //   title: new Text('No provision of this Agreement shall be deemed to be waived and no breach excused'),
-                  // ),
-                  // new ListTile(
-                  //   leading: new MyBullet(),
-                  //   title: new Text('Creator reserves the right to suspend or terminate services provided.'),
-                  // )
+                  new ListTile(
+                    leading: new MyBullet(),
+                    title: new Text('No provision of this Agreement shall be deemed to be waived and no breach excused',
+                      style: TextStyle(
+                          color:Colors.black,fontFamily: 'Inter',
+                          fontSize:15,fontWeight: FontWeight.w500
+                      ),),
+                  ),
+                  new ListTile(
+                    leading: new MyBullet(),
+                    title: new Text('Creator reserves the right to suspend or terminate services provided.',
+                      style: TextStyle(
+                          color:Colors.black,fontFamily: 'Inter',
+                          fontSize:15,fontWeight: FontWeight.w500
+                      ),),
+                  )
                 ],
               ),
             ),
@@ -226,9 +242,12 @@ Card(
 
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.teal, // background
+                  primary: Color(0xFF27A58F), // background
                   onPrimary: Colors.white, // foreground
                   padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                  shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0),
+                  ),
                 ),
                 onPressed: () {
                   // Navigator.pop(context);

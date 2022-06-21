@@ -196,9 +196,9 @@ class _DefineChatConsultantPriceState extends State<DefineChatConsultantPrice> {
     return Scaffold(
       backgroundColor: Color(0xFFF0F0F0),
         appBar:PreferredSize(
-        preferredSize: Size.fromHeight(35.0), // here the desired height
-        child:Padding(
-    padding: const EdgeInsets.all(5),
+        preferredSize: Size.fromHeight(40.0), // here the desired height
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(5,10,0,5),
     child:  AppBar(
         leading: InkWell(
         onTap: () {

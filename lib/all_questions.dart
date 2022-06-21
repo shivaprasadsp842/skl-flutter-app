@@ -581,7 +581,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                     //tab2 positive
                     Tab(
                       child:  Container(
-                        width: 73,
+                        width: 76,
                         height: 35,
                         decoration: BoxDecoration(
                           border: Border.all(color: Color(0xFFC4C4C4), width: 1),
@@ -926,7 +926,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           ),
 
           SizedBox(
-            height:150,
+            height: MediaQuery.of(context).size.height*0.23,
           ),
 
 
@@ -940,7 +940,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
           bottomSheet: Container(
           //color: Colors.white,
-              height: MediaQuery.of(context).size.height*0.22,
+              height: MediaQuery.of(context).size.height*0.23,
             decoration: BoxDecoration(
              borderRadius: BorderRadius.circular(4),
               color: Colors.white,
@@ -959,40 +959,40 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                       //color: Colors.black12,
                       child: Center(
                         child: Column(
-                          // mainAxisAlignment: MainAxisAlignment.center,
-                          // mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          //mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
                             SizedBox(
                               height:10,
                             ),
                             const Text('Leave a Question', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700,fontFamily: 'Inter',height: 1)),
-                            SizedBox(
-                              height:5,
-                            ),
+                            SizedBox(height:2,),
 
-                            Container(
-height: 75,
-                              padding: const EdgeInsets.fromLTRB(20.0, 5, 10, 010),
+                            Padding(
+
+                              padding: const EdgeInsets.fromLTRB(20.0, 3, 10, 0),
                               child:  Container(
-                                padding: const EdgeInsets.fromLTRB(70.0, 20, 70, 15),
+                                width: MediaQuery.of(context).size.width*0.9,
+                                height: 60,
+                                padding: const EdgeInsets.fromLTRB(50.0, 20, 50, 15),
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white, width: 1),
+                                  border: Border.all(color: Color(0x80E5E5E5), width: 1),
                                   borderRadius: BorderRadius.circular(05),
                                   color: Color(0x80E5E5E5),
                                   //shape: BoxShape.circle,
                                 ),
+                                child:Center(
                                 child:Text(
-                                  'Rs. 500 / Question',
-                                  style: TextStyle(
+                                  'Rs. 500 / Question',style: TextStyle(
                                     fontSize: 15,
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: 'Inter',height: 1.2
+                                    fontWeight: FontWeight.bold
                                 ), //Textstyle
+                                ),
                                 ),
                               ),
                             ),
-
+                            SizedBox(height:2,),
                             ElevatedButton(
 
                               style: ElevatedButton.styleFrom(

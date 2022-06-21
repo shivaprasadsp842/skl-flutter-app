@@ -3,6 +3,7 @@ import 'package:http/http.dart';
 
 final Map<String, String> headers = {"Access-Control-Allow-Origin": "*"};
 final String url ='http://inalltime.skltechnologies.com/api/';
+final String imageUrl ='http://inalltime.skltechnologies.com/api/images/';
 
 class Services{
 
@@ -77,13 +78,20 @@ class Services{
 
   platform_url(request) async{
 
-    print('this is the request sending for become_master : $request');
+    print('this is the request sending for User : $request');
     Response response = await post(Uri.parse('${url}become_master_add.php'),headers: headers, body: request );
     var result =json.decode(response.body);
     return result;
 
   }
+  profile_update(request) async{
 
+    print('this is the request sending for User : $request');
+    Response response = await post(Uri.parse('${url}profile_update.php'),headers: headers, body: request );
+    var result =json.decode(response.body);
+    return result;
+
+  }
 
   reportUser(request) async{
 
@@ -93,6 +101,7 @@ class Services{
     return result;
 
   }
+
   blockUser(request) async{
 
     print('this is the request sending for User : $request');

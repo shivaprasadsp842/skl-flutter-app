@@ -32,7 +32,7 @@ class _RatingState extends State<Rating> {
           //     color: Colors.grey,
           //   ),
           // ),
-          backgroundColor: Colors.black,
+          backgroundColor: Color(0xFF301C16),
           elevation: 0,
           title:  Stack(
             children: <Widget>[
@@ -98,16 +98,16 @@ class _RatingStatefulViewState extends State<RatingStatefulView > {
               children: <Widget>[
 
             Padding(
-            padding: const EdgeInsets.fromLTRB(0,40,0,10), // Border radius
+            padding: const EdgeInsets.fromLTRB(0,40,0,0), // Border radius
             child: CircleAvatar(
-                  radius: 70,
+                  radius: 90,
                   backgroundColor: Colors.transparent,
                   child: Padding(
                     padding: const EdgeInsets.all(5), // Border radius
                     child: ClipOval(child:   Image(
                       image: new AssetImage("assets/img_2.png"),
-                      width: 300,
-                      height: 300,
+                      width: 200,
+                      height: 200,
                       //color: null,
                       //fit: BoxFit.scaleDown,
                       alignment: Alignment.center,
@@ -120,22 +120,24 @@ class _RatingStatefulViewState extends State<RatingStatefulView > {
                   alignment: Alignment.center,
                   child: Container(
 
-                    padding: const EdgeInsets.fromLTRB(10, 10, 00, 10),
+                    padding: const EdgeInsets.fromLTRB(10, 0, 00, 10),
                     child: Text(
                       "Rajiv Talreja", style: TextStyle(
                       fontSize: 20,
                       color: Colors.black,
-                        fontWeight: FontWeight.w700, fontFamily: "inter"
+                        fontWeight: FontWeight.w700,
+                        fontFamily: "Inter"
                     ),
                     ),
                   ),
                 ),
 
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
 
-                    IconButton(icon: Icon(Icons.star,size: 40,color: Color(0xFFFDB600),),
+                    IconButton(
+                      icon: Icon(Icons.star,size: 40,color: Color(0xFFFDB600),),
                       onPressed: () {
 
                       },
@@ -157,7 +159,7 @@ class _RatingStatefulViewState extends State<RatingStatefulView > {
 
                       },
                     ),SizedBox(width: 10),
-                    IconButton(icon: Icon(Icons.star,size: 40,color: Color(0xFFFDB600),),
+                    IconButton(icon: Icon(Icons.star,size: 40,color: Color(0xFFC4C4C4),),
                       onPressed: () {
 
                       },
@@ -170,9 +172,9 @@ class _RatingStatefulViewState extends State<RatingStatefulView > {
 
                 SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    SizedBox(width: 8),
+                    SizedBox(width: 1),
                     Container(
                       alignment: Alignment.centerRight,
                       child: IconButton(
@@ -241,36 +243,23 @@ class _RatingStatefulViewState extends State<RatingStatefulView > {
                   alignment: Alignment.centerLeft,
                   child: Container(
 
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-                    child: Card(
-                      elevation: 0,
-
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          // side: BorderSide(
-                          //   color: Color(0xFF6E7983),
-                          //   width: 1.0,
-                          // ),
-                        ),
-                        color: Colors.white,
-                        child: Padding(
-                          padding: EdgeInsets.all(1.0),
-                          child:
+                    padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                    child:
                           TextField(
                             maxLength: 500,
-                            maxLines: 5,
+                            maxLines: 7,
                             decoration: InputDecoration(
 
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10.0),
-                                borderSide: BorderSide( color: Color(0xFF6E7983), width: 1.0),
+                                borderSide: BorderSide( color: Color(0xFF6E7983), width: 0.5),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10.0),
-                                borderSide: BorderSide( color: Color(0xFF6E7983), width: 1.0),
+                                borderSide: BorderSide( color: Color(0xFF6E7983), width: 0.5),
                               ),
                               hintText: 'Describe your experience ',
-                                hintStyle: TextStyle(fontSize: 15, color: Color(0x806E7983), fontWeight: FontWeight.w700, fontFamily: "inter", height: 1.2)
+                                hintStyle: TextStyle(fontSize: 20, color: Color(0x806E7983), fontWeight: FontWeight.w700, fontFamily: "Inter", height: 1.2)
                             ),
                           ),
                           // TextField(
@@ -283,8 +272,7 @@ class _RatingStatefulViewState extends State<RatingStatefulView > {
                           // ),
                         )
                     ),
-                  ),
-                ),
+
 
 
 
@@ -297,7 +285,7 @@ class _RatingStatefulViewState extends State<RatingStatefulView > {
                     new Flexible(child:  Align(
                       alignment: Alignment.bottomCenter,
                       child:  Container(
-                        // decoration: const BoxDecoration(color: Colors.black),
+                        width: MediaQuery.of(context).size.width*0.7,
                         margin: EdgeInsets.all(10.0),
                         // padding: EdgeInsets.all(12.0),
                         decoration:BoxDecoration(

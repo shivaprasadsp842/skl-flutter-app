@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_ui/success.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 import 'all_questions.dart';
 
@@ -106,7 +107,13 @@ class LeaveQuestion extends StatelessWidget {
 
       child: Column(
         children: [
+
         SizedBox(
+          height: 5,),
+
+        Container(
+          padding: EdgeInsets.only(left: 3,top: 0,bottom: 10, right: 3),
+          child: SizedBox(
           height: MediaQuery.of(context).size.height * 0.751,
         child:  Card(
 
@@ -115,13 +122,14 @@ class LeaveQuestion extends StatelessWidget {
               ),
               color: Colors.white,
               child: Padding(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(18.0),
                 child: TextField(
                   maxLines: 30,
                   decoration: InputDecoration.collapsed(hintText: "Type a message", hintStyle:
                   TextStyle(color: Color(0xC4C4C4C4), fontSize: 20, fontWeight: FontWeight.w700, fontFamily: 'Inter')),
                 ),
               )
+          ),
           ),
           ),
 
@@ -147,7 +155,7 @@ class LeaveQuestion extends StatelessWidget {
 
         height: 140.0,
         child: Container(
-          padding: EdgeInsets.only(left: 5,top: 10,bottom: 10),
+          padding: EdgeInsets.only(left: 3,top: 5,bottom: 10, right: 3),
           height: 60,
           color: Color(0xFFF0F0F0),
           width: double.infinity,
@@ -175,44 +183,54 @@ class LeaveQuestion extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: Icon(Icons.emoji_emotions_outlined, color: Colors.grey, size: 24, ),
+                  child: Icon(Icons.emoji_emotions_outlined, color: Color(0xFF626262), size: 22, ),
                 ),
               ),
               SizedBox(width: 15,),
               Expanded(
                 child:TextField(
-                  maxLines: 2,
+                  maxLines: 1,
                   decoration: InputDecoration.collapsed(hintText: ""),
                 ),
               ),
+
               SizedBox(width: 15,),
+
               IconButton(
-                icon: new Image.asset('assets/img_23.png', width: 22,height: 22, ),
+                icon: new Image.asset('assets/img_23.png', width: 18,height: 20, ),
 
                 onPressed: () {
 
                 },
               ),
-              CircleAvatar(
+
+      SizedBox(
+        height: 30,
+        child:CircleAvatar(
                 backgroundColor: Colors.black,
                 child:  FloatingActionButton(
                   onPressed: (){},
-                  child: Icon(Icons.camera_alt_rounded,color: Colors.white,size: 20,),
+                  child: Icon(Icons.camera_alt_rounded,color: Colors.white,size: 18,),
                   backgroundColor: Colors.black,
                   elevation: 0,
                 ),
               ),
-              SizedBox(width: 5,),
-      CircleAvatar(
+              ),
+
+
+      SizedBox(
+        height: 30,
+        child: CircleAvatar(
         backgroundColor: Colors.black,
         child: FloatingActionButton(
                 onPressed: (){},
-                child: Icon(Icons.mic,color: Colors.white,size: 20,),
+                child: Icon(Icons.mic,color: Colors.white,size: 18,),
                 backgroundColor: Colors.black,
                 elevation: 0,
               ),
               ),
-              SizedBox(width: 5,),
+              ),
+              SizedBox(width: 8,),
             ],
 
           ),
@@ -220,17 +238,19 @@ class LeaveQuestion extends StatelessWidget {
 
 
 
-
+              SizedBox(height: 5,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
 
-                  ElevatedButton.icon(
+                  Container(
+                    width: MediaQuery.of(context).size.width*0.59,
+                    child:ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.black, // background
                       onPrimary: Colors.white, // foreground
-                      padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                      padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
                       shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(10.0),
                       ),
@@ -247,11 +267,13 @@ class LeaveQuestion extends StatelessWidget {
                       showModalBottomSheet<void>(
                         context: context,
                         builder: (BuildContext context) {
-                          return Container(
-                            height: 350,
-                            color: Color(0xF5F5F5F5),
-
-                            child: Column(
+                          return SlidingUpPanel(
+                            minHeight: MediaQuery.of(context).size.height*0.80,
+                              backdropEnabled: true,
+                          //     borderRadius: BorderRadius.only(
+                          //     topLeft: Radius.circular(20.0),
+                          // topRight: Radius.circular(20.0)),
+                          panel: Column(
                               // mainAxisAlignment: MainAxisAlignment.center,
                               // mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
@@ -281,7 +303,7 @@ class LeaveQuestion extends StatelessWidget {
                                   ),),
                                 SizedBox(height:10,),
                                 Container(
-                                  padding: const EdgeInsets.fromLTRB(20, 30, 20, 00),
+                                  padding: const EdgeInsets.fromLTRB(30, 10, 20, 00),
                                   child:    TextField(
                                     maxLength: 10,
                                     maxLines: 1,
@@ -290,7 +312,7 @@ class LeaveQuestion extends StatelessWidget {
                                     keyboardType: TextInputType.number,
                                     decoration: InputDecoration(
                                       //labelText: "Phone number",
-                                      hintText: "₹ " + "Amount",
+                                      hintText: "  ₹ " + "Amount",
                                       contentPadding: EdgeInsets.all(15),
                                       counter: Offstage(),//  <- you can it to 0.0 for no space
                                       isDense: true,
@@ -303,6 +325,7 @@ class LeaveQuestion extends StatelessWidget {
                                     ),
                                   ),
                                 ),
+                                SizedBox(height: 5,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
@@ -353,9 +376,7 @@ class LeaveQuestion extends StatelessWidget {
                                           MaterialPageRoute(builder: (context) => SuccessFull()),
                                         );
                                       },
-                                      icon:ImageIcon(
-                                        AssetImage("assets/img_13.png"),
-                                        size: 15,
+                                      icon:ImageIcon(AssetImage("assets/img_13.png"), size: 15,
                                         //  color: Color(0xFF3A5A98),
                                       ), //icon data for elevated button
                                       label: Text("SEND AS PREORITISED QUESTION",
@@ -378,14 +399,18 @@ class LeaveQuestion extends StatelessWidget {
                       );
                     },
                   ),
+                  ),
 
 
                   SizedBox(height:10,width:10,),
-                  ElevatedButton.icon(
+
+                  Container(
+                    width: MediaQuery.of(context).size.width*0.30,
+                    child:   ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.teal, // background
                       onPrimary: Colors.white, // foreground
-                      padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+                      padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
                       shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(10.0),
                       ),
@@ -397,11 +422,9 @@ class LeaveQuestion extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => SuccessFull()),
                       );
                     },
-                    icon:ImageIcon(
-                      AssetImage("assets/img_13.png"),
-                    size: 14,
+                    icon:ImageIcon(AssetImage("assets/img_13.png"), size: 14,
                     //  color: Color(0xFF3A5A98),
-                    ),
+                      ),
 
                     label: Text("Send",
                       style: TextStyle(
@@ -411,6 +434,7 @@ class LeaveQuestion extends StatelessWidget {
                         fontWeight: FontWeight.w700
                       ),),
 
+                  ),
                   ),
                 ],
               ),

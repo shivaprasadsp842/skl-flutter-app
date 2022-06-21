@@ -226,14 +226,16 @@ class _MasterState extends State<Master> {
                   //   ),
                   // ),
                   Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.fromLTRB(0, 320, 0, 0),
+                    padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.45),
+                    child:
+                    Container(
+                      width: MediaQuery.of(context).size.width*1.0,
 
-                    child:  Card(
-                      // margin: new EdgeInsets.fromLTRB(50.0, 35, 50, 24),
-                      elevation: 50,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black12, width: 1),
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.white,
+                        //shape: BoxShape.circle,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(30.0, 20, 20, 10),
@@ -280,18 +282,20 @@ class _MasterState extends State<Master> {
 
 
 
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(40.0, 290, 20, 16),
-                    child: Card(
+                  Padding(
+                    padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.4, left:40),
+                    //padding: const EdgeInsets.fromLTRB(45.0, 280, 30, 16),
+                    child:Container(
+                      width: MediaQuery.of(context).size.width*0.78,
 
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black12, width: 1),
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.black,
+                        //shape: BoxShape.circle,
                       ),
-
-                      elevation: 2,
-                      color: Colors.black,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(60.0, 10, 55, 10),
+                        padding: const EdgeInsets.fromLTRB(10.0, 10, 10, 10),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -402,9 +406,9 @@ class _MasterState extends State<Master> {
                           ),
                           SizedBox(height: 3,),
                           Text('LEAVE A ',
-                            style: TextStyle(fontSize: 8,fontWeight: FontWeight.w800),),
+                            style: TextStyle(fontSize: 5,fontWeight: FontWeight.w800),),
                           Text(' QUESTION',
-                            style: TextStyle(fontSize: 8,fontWeight: FontWeight.w800),),
+                            style: TextStyle(fontSize: 5,fontWeight: FontWeight.w800),),
 
                         ],
                       ),
@@ -441,9 +445,9 @@ class _MasterState extends State<Master> {
                           ),
                           SizedBox(height: 3,),
                           Text('CHAT ',
-                            style: TextStyle(fontSize: 8,fontWeight: FontWeight.w800),),
+                            style: TextStyle(fontSize: 5,fontWeight: FontWeight.w800),),
                           Text(' CONSULTATION',
-                            style: TextStyle(fontSize: 8,fontWeight: FontWeight.w800),),
+                            style: TextStyle(fontSize: 5,fontWeight: FontWeight.w800),),
 
                         ],
                       ),
@@ -479,9 +483,9 @@ class _MasterState extends State<Master> {
                           ),
                           SizedBox(height: 3,),
                           Text('DIRECT',
-                            style: TextStyle(fontSize: 8,fontWeight: FontWeight.w800),),
+                            style: TextStyle(fontSize: 5,fontWeight: FontWeight.w800),),
                           Text(' APPOINTMENT',
-                            style: TextStyle(fontSize: 8,fontWeight: FontWeight.w800),),
+                            style: TextStyle(fontSize: 5,fontWeight: FontWeight.w800),),
 
                         ],
                       ),
@@ -494,132 +498,6 @@ class _MasterState extends State<Master> {
           ],
         ),
       ),
-
-
-
-      // bottomSheet: Container(
-      //   padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-      //   color: Color(0xCCCCCCCC),
-      //   height: 100.0,
-      //   child: Row(
-      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //     children: <Widget>[
-      //       Padding(
-      //         padding: EdgeInsets.only(left: 20.0,right: 0.0),
-      //         child:     Column(
-      //           children: <Widget>[
-      //             Container(
-      //               //color: Colors.grey,
-      //               margin: EdgeInsets.all(0),
-      //               padding: EdgeInsets.all(0),
-      //               decoration: BoxDecoration(
-      //                   borderRadius: BorderRadius.circular(100),
-      //                   border: Border.all(width: 3, color: Colors.white)),
-      //               child:  IconButton(
-      //                 //update the bottom app bar view each time an item is clicked
-      //                   onPressed: () {
-      //                     Navigator.push(
-      //                       context,
-      //                       MaterialPageRoute(builder: (context) =>  EditLeaveQuestion()),
-      //                     );
-      //                   },
-      //                   iconSize: 27.0,
-      //                   icon:  ImageIcon(
-      //                     AssetImage("assets/question.png"),
-      //                     size: 25,
-      //                     color: Colors.black,
-      //                   )
-      //               ),
-      //             ),
-      //             SizedBox(height:5),
-      //             Text('LEAVE A ',
-      //               style: TextStyle(fontSize: 12,),),
-      //             Text('QUESTION',
-      //               style: TextStyle(fontSize: 12,),),
-      //
-      //           ],
-      //         ),
-      //       ),
-      //       Padding(
-      //         padding: EdgeInsets.only(left: 10.0, right: 0.0),
-      //         child: Column(
-      //           children: <Widget>[
-      //             Container(
-      //               //color: Colors.grey,
-      //               margin: EdgeInsets.all(0),
-      //               padding: EdgeInsets.all(0),
-      //               decoration: BoxDecoration(
-      //                   borderRadius: BorderRadius.circular(100),
-      //                   border: Border.all(width: 3, color: Colors.white)),
-      //               child: IconButton(
-      //                 //update the bottom app bar view each time an item is clicked
-      //                   onPressed: () {
-      //                     Navigator.push(
-      //                       context,
-      //                       MaterialPageRoute(builder: (context) =>  EditChatConsultantPrice()),
-      //                     );
-      //                   },
-      //                   iconSize: 27.0,
-      //                   icon : Icon(Icons.chat,size: 20,color:Colors.black)
-      //                 // icon:  ImageIcon(
-      //                 //   AssetImage("assets/chat.png"),
-      //                 //   size: 25,
-      //                 //   //color: Color(0xFF3A5A98),
-      //                 // )
-      //               ),
-      //             ),
-      //             SizedBox(height:5),
-      //             Text('CHAT ',
-      //               style: TextStyle(fontSize: 12,),),
-      //             Text(' CONSULTATION',
-      //               style: TextStyle(fontSize: 12,),),
-      //           ],
-      //         ),
-      //       ),
-      //       Padding(
-      //         padding: EdgeInsets.only(right: 15.0),
-      //         child:    Column(
-      //           children: <Widget>[
-      //             Container(
-      //               //color: Colors.grey,
-      //               margin: EdgeInsets.all(0),
-      //               padding: EdgeInsets.all(0),
-      //               decoration: BoxDecoration(
-      //                   borderRadius: BorderRadius.circular(100),
-      //                   border: Border.all(width: 3, color: Colors.white)),
-      //               child:  IconButton(
-      //                 //update the bottom app bar view each time an item is clicked
-      //                   onPressed: () {
-      //                     Navigator.push(
-      //                       context,
-      //                       MaterialPageRoute(builder: (context) =>  EditBookAppointmentPrice()),
-      //                     );
-      //                   },
-      //                   iconSize: 27.0,
-      //                   icon : Icon(Icons.calendar_today_outlined,size: 20,color:Colors.black)
-      //                 // icon:  ImageIcon(
-      //                 //     AssetImage("assets/appointment.png"),
-      //                 //     size: 25,
-      //                 //     color: Color(0xFF3A5A98),
-      //                 //   )
-      //               ),
-      //             ),
-      //
-      //             Text('DIRECT ',
-      //               style: TextStyle(fontSize: 12,),),
-      //             Text(' APPOINTMENT',
-      //               style: TextStyle(fontSize: 12,),),
-      //           ],
-      //         ),
-      //       )
-      //     ],
-      //   ),
-      // ),
-
-
-
-
-
 
     );
 

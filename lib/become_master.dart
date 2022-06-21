@@ -218,14 +218,23 @@ class _UserViewState extends State<UserView> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 320, 0, 0),
+                       padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.45),
+      child:
+      Container(
+        width: MediaQuery.of(context).size.width*01.0,
 
-                    child:  Card(
-                      // margin: new EdgeInsets.fromLTRB(50.0, 35, 50, 24),
-                      elevation: 20,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40.0),
-                      ),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.black12, width: 1),
+          borderRadius: BorderRadius.circular(35),
+          color: Colors.white,
+          //shape: BoxShape.circle,
+        ),
+                    // Card(
+                    //   // margin: new EdgeInsets.fromLTRB(50.0, 35, 50, 24),
+                    //   elevation: 20,
+                    //   shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(40.0),
+                    //   ),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(20.0, 20, 20, 10),
                         child: Column(
@@ -259,8 +268,8 @@ class _UserViewState extends State<UserView> {
                             ), //Textstyle
                             ), //Text
                             SizedBox(
-                              height: 200 ,
-                            ), //SizedBox
+                              height: MediaQuery.of(context).size.height*0.4,
+                            ),  //SizedBox
                             //SizedBox
                           ],
                         ), //Column
@@ -271,17 +280,28 @@ class _UserViewState extends State<UserView> {
 
 
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(40.0, 290, 20, 16),
-                    child: Card(
+                    padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.4, left:40),
 
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
+                    //  padding: const EdgeInsets.fromLTRB(40.0, 290, 20, 16),
+                    child:Container(
+                      width: MediaQuery.of(context).size.width*0.785,
+
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black12, width: 1),
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.black,
+                        //shape: BoxShape.circle,
                       ),
-
-                      elevation: 02,
-                      color: Colors.black,
+                    // Card(
+                    //
+                    //   shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(30.0),
+                    //   ),
+                    //
+                    //   elevation: 02,
+                    //   color: Colors.black,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(60.0, 10, 60, 10),
+                        padding: const EdgeInsets.fromLTRB(10.0, 10, 10, 10),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -359,8 +379,9 @@ class _UserViewState extends State<UserView> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(60.0, 10, 24, 10),
+          padding: const EdgeInsets.fromLTRB(50.0, 13, 50, 13),
           child: Container(
+            width: MediaQuery.of(context).size.width*1.0,
             decoration: BoxDecoration(
                 border: Border.all(  width: 8,color: Colors.white),
               borderRadius: BorderRadius.all(

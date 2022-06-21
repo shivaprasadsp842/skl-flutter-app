@@ -101,14 +101,15 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
               borderRadius: BorderRadius.circular(25),
             ),
             child: SizedBox(
-              height: 20,
-              width:25,
+              width: 40,
+              height: 49,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(25),
                 child: Container(
+                  //   height: 250,
                   // color: Theme.of(context).colorScheme.button,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 10, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(0, 15, 10, 0),
                     child: Row(
                       children: [
                         Column(
@@ -117,7 +118,7 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
                             ImageIcon(
                               AssetImage("assets/Group 686.png"),
                               color: Colors.white,
-                              size: 30,
+                              size: 20,
                             ),
                           ],
                         ),
@@ -145,12 +146,13 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
 
                         ImageIcon(
                           AssetImage("assets/Vector.png"),
-                          color: Color(0x7D000000),
+                          color: Color(0xFF818181),
+
                           size: 20,
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
-                          child: Text('Copy Profile Link',  style: TextStyle( color: Color(0x7D000000), fontSize: 15, fontWeight: FontWeight.w600), ),
+                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          child: Text('Copy Profile Link',  style: TextStyle(height: 1.2, color: Color(0xFF6E7983), fontSize: 15, fontWeight: FontWeight.w600, fontFamily: 'Inter'), ),
                         ),
                       ],
                     ),
@@ -158,17 +160,17 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
               PopupMenuItem(
                   value: 2,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                     child: Row(
                       children: [
                         ImageIcon(
                           AssetImage("assets/Group 724.png"),
-                          color: Color(0x7D000000),
+                          color: Color(0xFF818181),
                           size: 20,
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(16, 0, 0, 0),
-                          child: Text(' Share Proflie',  style: TextStyle( color: Color(0x7D000000), fontSize: 15, fontWeight: FontWeight.w600), ),
+                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          child: Text('Share Proflie',  style: TextStyle(height: 1.2, color: Color(0xFF6E7983), fontSize: 15, fontWeight: FontWeight.w600, fontFamily: 'Inter'), ),
                         ),
                       ],
                     ),
@@ -181,12 +183,12 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
                       children: [
                         ImageIcon(
                           AssetImage("assets/Group 726.png"),
-                          color: Color(0x7D000000),
+                          color: Color(0xFF818181),
                           size: 20,
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                          child: Text(' Report User',  style: TextStyle( color: Color(0x7D000000), fontSize: 15, fontWeight: FontWeight.w600),),
+                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          child: Text('Report User',  style: TextStyle(height: 1.2, color: Color(0xFF6E7983), fontSize: 15, fontWeight: FontWeight.w600, fontFamily: 'Inter'),),
                         ),
                       ],
                     ),
@@ -199,18 +201,19 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
                       children: [
                         Icon(
                           Icons.block,
-                          color: Color(0x7D000000),
+                          color: Color(0xFF818181),
                           size: 20,
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                          child: Text(' Block User',  style: TextStyle( color: Color(0x7D000000), fontSize: 15, fontWeight: FontWeight.w600),),
+                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          child: Text('Block User',  style: TextStyle(height: 1.2, color: Color(0xFF6E7983), fontSize: 15, fontWeight: FontWeight.w600, fontFamily: 'Inter'),),
                         ),
                       ],
                     ),
                   ))
             ],
           ),
+
 
         ],
         title:  Container(
@@ -577,7 +580,7 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
                         //tab2 positive
                         Tab(
                           child:  Container(
-                            width: 73,
+                            width: 76,
                             height: 35,
                             decoration: BoxDecoration(
                               border: Border.all(color: Color(0xFFC4C4C4), width: 1),
@@ -922,7 +925,7 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
               ),
 
               SizedBox(
-                height:150,
+                height: MediaQuery.of(context).size.height*0.265,
               ),
 
 
@@ -943,7 +946,7 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
             blurRadius: 3.0,
           ),],
         ),
-        height: MediaQuery.of(context).size.height*0.22,
+        height: MediaQuery.of(context).size.height*0.265,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -963,26 +966,30 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
                         const Text('Book A Direct Appointment', style:
                         TextStyle(fontSize: 10, fontWeight: FontWeight.w700,fontFamily: 'Inter',height: 1)),
                         SizedBox(
-                          height:5,
+                          height:2,
                         ),
 
                         Padding(
 
-                          padding: const EdgeInsets.fromLTRB(20.0, 5, 10, 0),
+                          padding: const EdgeInsets.fromLTRB(10.0, 5, 10, 0),
                           child:  Container(
-                            padding: const EdgeInsets.fromLTRB(80.0, 25, 80, 25),
+                            height: 75,
+                            width: MediaQuery.of(context).size.width*0.85,
+                           // padding: const EdgeInsets.fromLTRB(80.0, 28, 80, 22),
                             decoration: BoxDecoration(
                               border: Border.all(color: Color(0xFFE5E5E5), width: 1),
                               borderRadius: BorderRadius.circular(05),
                               color: Color(0x80E5E5E5),
                               //shape: BoxShape.circle,
                             ),
-                            child:Text(
+                            child:Center(
+                              child:Text(
                               'Rs. 5000 / Hour',style: TextStyle(
                                 fontSize: 15,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w700,fontFamily: 'Inter',height: 1
                             ), //Textstyle
+                            ),
                             ),
                           ),
                         ),
@@ -994,7 +1001,7 @@ class _BookingVideoScreenState extends State<BookingVideoScreen> {
                           style: ElevatedButton.styleFrom(
                             primary: Color(0xCC000000), // background
                             onPrimary: Colors.white, // foreground
-                            padding: const EdgeInsets.fromLTRB(30, 13, 30, 13),
+                            padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
                             shape: new RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(10.0),
                             ),

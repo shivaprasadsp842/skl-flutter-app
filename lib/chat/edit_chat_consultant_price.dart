@@ -201,9 +201,11 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                     child: Text(
                       "Rating and reviews",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 10,
                         color: Colors.black,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Inter',
+                        height: 1,
                       ),
                     ),
                   ),
@@ -214,50 +216,58 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                 padding: const EdgeInsets.fromLTRB(10.0, 0, 10, 10),
                 child: Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(5.0),
                   ),
                   elevation: 2,
                   child:Container(
-                    padding: const EdgeInsets.fromLTRB(10.0, 10, 10, 10),
+                    padding: const EdgeInsets.fromLTRB(05.0, 15, 10, 15),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text('4.5',
                               style: TextStyle(
-                                fontSize: 45,
-                                color: Colors.black54,
+                                fontSize: 50,
+                                color: Color(0xC9383F46),
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'Inter',
                               ),),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-                                Icon(Icons.star,size: 12,color: Colors.green,),
-                                Icon(Icons.star,size: 12,color: Colors.green,),
-                                Icon(Icons.star,size: 12,color: Colors.green,),
-                                Icon(Icons.star,size: 12,color: Colors.green,),
-                                Icon(Icons.star,size: 12,color: Colors.green,),
+                                SizedBox(width: 5,),
+                                Icon(Icons.star,size: 10,color: Color(0XFF00B41D),),
+                                Icon(Icons.star,size: 10,color: Color(0XFF00B41D),),
+                                Icon(Icons.star,size: 10,color: Color(0XFF00B41D),),
+                                Icon(Icons.star,size: 10,color: Color(0XFF00B41D),),
+                                Icon(Icons.star,size: 10,color: Color(0XFF00B41D),),
+
 
 
                               ],
 
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 5,
                             ),
-                            Text('536236',
+                            Text('  536236',
                               style: TextStyle(
                                 fontSize: 10,
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),),
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Inter',
+                                height: 1,
+                              ),
+                            ),
                           ],
-
                         ),
 
                         SizedBox(
-                          width: 30,
+                          width: MediaQuery.of(context).size.width * 0.1,
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -272,23 +282,26 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 Text('5',
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.bold,
-                                  ),),
+                                    color: Color(0xFF6E7983),
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: 'Inter',
+                                    height: 1,
+                                  ),
+                                ),
                                 SizedBox(
                                   height: 10,
                                   width: 10,
                                 ),
                                 Container(
                                   margin: EdgeInsets.symmetric(vertical: 03),
-                                  width: 180,
-                                  height: 10,
+                                  width: MediaQuery.of(context).size.width *0.5,
+                                  height: 8,
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                                    borderRadius: BorderRadius.all(Radius.circular(50)),
                                     child: LinearProgressIndicator(
                                       value: 0.9,
-                                      valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
-                                      backgroundColor: Color(0xffD6D6D6),
+                                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF00B41D)),
+                                      backgroundColor: Color(0xFFC4C4C4),
                                     ),
                                   ),
                                 ),
@@ -297,15 +310,17 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                               ],
                             ),
 
-
+                            SizedBox(height: 4,),
                             // 2nd row
                             Row(
                               children: <Widget>[
                                 Text('4',
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF6E7983),
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: 'Inter',
+                                    height: 1,
                                   ),),
                                 SizedBox(
                                   height: 10,
@@ -313,29 +328,31 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 ),
                                 Container(
                                   margin: EdgeInsets.symmetric(vertical: 03),
-                                  width: 180,
-                                  height: 10,
+                                  width: MediaQuery.of(context).size.width *0.5,
+                                  height: 8,
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                                    borderRadius: BorderRadius.all(Radius.circular(50)),
                                     child: LinearProgressIndicator(
                                       value: 0.8,
-                                      valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
-                                      backgroundColor: Color(0xffD6D6D6),
+                                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF00B41D)),
+                                      backgroundColor: Color(0xFFC4C4C4),
                                     ),
                                   ),
                                 ),
 
                               ],
                             ),
-
-//3rd row
+                            SizedBox(height: 4,),
+                            //3rd row
                             Row(
                               children: <Widget>[
                                 Text('3',
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF6E7983),
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: 'Inter',
+                                    height: 1,
                                   ),),
                                 SizedBox(
                                   height: 10,
@@ -343,29 +360,31 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 ),
                                 Container(
                                   margin: EdgeInsets.symmetric(vertical: 03),
-                                  width: 180,
-                                  height: 10,
+                                  width: MediaQuery.of(context).size.width *0.5,
+                                  height: 8,
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                                    borderRadius: BorderRadius.all(Radius.circular(50)),
                                     child: LinearProgressIndicator(
                                       value: 0.6,
-                                      valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
-                                      backgroundColor: Color(0xffD6D6D6),
+                                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF00B41D)),
+                                      backgroundColor: Color(0xFFC4C4C4),
                                     ),
                                   ),
                                 ),
 
                               ],
                             ),
-
+                            SizedBox(height: 4,),
 //4th row
                             Row(
                               children: <Widget>[
                                 Text('2',
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF6E7983),
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: 'Inter',
+                                    height: 1,
                                   ),),
                                 SizedBox(
                                   height: 10,
@@ -373,28 +392,31 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 ),
                                 Container(
                                   margin: EdgeInsets.symmetric(vertical: 03),
-                                  width: 180,
-                                  height: 10,
+                                  width: MediaQuery.of(context).size.width *0.5,
+                                  height: 8,
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                                    borderRadius: BorderRadius.all(Radius.circular(50)),
                                     child: LinearProgressIndicator(
                                       value: 0.4,
-                                      valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
-                                      backgroundColor: Color(0xffD6D6D6),
+                                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF00B41D)),
+                                      backgroundColor: Color(0xFFC4C4C4),
                                     ),
                                   ),
                                 ),
 
                               ],
                             ),
+                            SizedBox(height: 4,),
 //5th row
                             Row(
                               children: <Widget>[
                                 Text('1',
                                   style: TextStyle(
                                     fontSize: 10,
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF6E7983),
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: 'Inter',
+                                    height: 1,
                                   ),),
                                 SizedBox(
                                   height: 10,
@@ -402,14 +424,14 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 ),
                                 Container(
                                   margin: EdgeInsets.symmetric(vertical: 03),
-                                  width: 180,
-                                  height: 10,
+                                  width: MediaQuery.of(context).size.width *0.5,
+                                  height: 8,
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                                    borderRadius: BorderRadius.all(Radius.circular(50)),
                                     child: LinearProgressIndicator(
                                       value: 0.2,
-                                      valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
-                                      backgroundColor: Color(0xffD6D6D6),
+                                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF00B41D),),
+                                      backgroundColor: Color(0xFFC4C4C4),
                                     ),
                                   ),
                                 ),
@@ -431,9 +453,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
 
 
 
-              SizedBox(
-                height:20,
-              ),
+
 
               PreferredSize(
                   child: TabBar(
@@ -444,9 +464,10 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                       tabs: [
                         Tab(
                           child:    Container(
-                            width: 80,
+                            width: 73,
+                            //   padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                             height: 35,
-                            //color: Colors.green,
+                            //color: Color(0xFF00B41D),
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black12, width: 1),
                               borderRadius: BorderRadius.circular(20),
@@ -455,8 +476,8 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                             ),
                             // padding: const EdgeInsets.fromLTRB(10.0, 0, 10, 10),
                             child: ActionChip(
-                                label: const Text('All'),
-                                labelStyle: const TextStyle(color: Color(0xFF005041),fontSize:12,),
+                                label: const Text('All', style: TextStyle(fontFamily: 'Inter',),),
+                                labelStyle: const TextStyle(color: Color(0xFF005041),fontSize:12, fontFamily: 'Inter',),
                                 // avatar: const Icon(Icons.color_lens_outlined, color: Colors.white),
                                 backgroundColor:  Color(0xB270EEDF),
                                 onPressed: () {
@@ -468,18 +489,18 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                         //tab2 positive
                         Tab(
                           child:  Container(
-                            width: 80,
+                            width: 76,
                             height: 35,
                             decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black12, width: 1),
+                              border: Border.all(color: Color(0xFFC4C4C4), width: 1),
                               borderRadius: BorderRadius.circular(20),
                               //color: Colors.yellow,
                               //shape: BoxShape.circle,
                             ),
                             child: ActionChip(
                                 label: const Text('Positive'),
-                                labelStyle: const TextStyle(color: Colors.black,fontSize:12),
-                                // avatar: const Icon(Icons.color_lens_outlined, color: Colors.white),
+                                labelStyle: const TextStyle(color: Color(0xFF005041), fontSize:12,  fontFamily: 'Inter',),
+                                //avatar: const Icon(Icons.color_lens_outlined, color: Colors.white),
                                 backgroundColor: Colors.white,
                                 onPressed: () {
                                   showSnackBar(context);
@@ -493,8 +514,8 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                             height: 35,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black12, width: 1),
-                              borderRadius: BorderRadius.circular(20),
-                              //color: Colors.yellow,
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
                               //shape: BoxShape.circle,
                             ),
                             child:
@@ -506,7 +527,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 children: [
                                   SizedBox(width:15),
                                   Text('5', style: TextStyle(
-                                      fontSize: 12, color: Colors.black),),
+                                      fontSize: 12, color: Color(0xFF005041),  fontFamily: 'Inter',fontWeight: FontWeight.w400),),
                                   SizedBox(width:1),
                                   Icon(Icons.star, color: Color(0xff243443), size:15,),
 
@@ -522,8 +543,8 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                             height: 35,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black12, width: 1),
-                              borderRadius: BorderRadius.circular(20),
-                              //color: Colors.yellow,
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
                               //shape: BoxShape.circle,
                             ),
                             child:
@@ -535,7 +556,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 children: [
                                   SizedBox(width:15),
                                   Text('4', style: TextStyle(
-                                      fontSize: 12, color: Colors.black),),
+                                      fontSize: 12, color: Color(0xFF005041),  fontFamily: 'Inter',fontWeight: FontWeight.w400),),
                                   SizedBox(width:1),
                                   Icon(Icons.star, color: Color(0xff243443), size:15,),
 
@@ -551,8 +572,8 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                             height: 35,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black12, width: 1),
-                              borderRadius: BorderRadius.circular(20),
-                              //color: Colors.yellow,
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
                               //shape: BoxShape.circle,
                             ),
                             child:
@@ -564,7 +585,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 children: [
                                   SizedBox(width:15),
                                   Text('3', style: TextStyle(
-                                      fontSize: 12, color: Colors.black),),
+                                      fontSize: 12, color: Color(0xFF005041),  fontFamily: 'Inter',fontWeight: FontWeight.w400),),
                                   SizedBox(width:1),
                                   Icon(Icons.star, color: Color(0xff243443), size:15,),
 
@@ -575,14 +596,13 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                           ),
                         ),
                         Tab(
-
                           child:  Container(
                             width: 50,
                             height: 35,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black12, width: 1),
-                              borderRadius: BorderRadius.circular(20),
-                              //color: Colors.yellow,
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
                               //shape: BoxShape.circle,
                             ),
                             child:
@@ -594,7 +614,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 children: [
                                   SizedBox(width:15),
                                   Text('2', style: TextStyle(
-                                      fontSize: 12, color: Colors.black),),
+                                      fontSize: 12, color: Color(0xFF005041),  fontFamily: 'Inter',fontWeight: FontWeight.w400),),
                                   SizedBox(width:1),
                                   Icon(Icons.star, color: Color(0xff243443), size:15,),
 
@@ -610,8 +630,8 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                             height: 35,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black12, width: 1),
-                              borderRadius: BorderRadius.circular(20),
-                              //color: Colors.yellow,
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
                               //shape: BoxShape.circle,
                             ),
                             child:
@@ -623,7 +643,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 children: [
                                   SizedBox(width:15),
                                   Text('1', style: TextStyle(
-                                      fontSize: 12, color: Colors.black),),
+                                      fontSize: 12, color: Color(0xFF005041),  fontFamily: 'Inter',fontWeight: FontWeight.w400),),
                                   SizedBox(width:1),
                                   Icon(Icons.star, color: Color(0xff243443), size:15,),
 
@@ -655,9 +675,9 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                             child: Padding(
                               padding: const EdgeInsets.all(5), // Border radius
                               child: ClipOval(child:   Image(
-                                image: new AssetImage("assets/arjun.png"),
-                                width: 30,
-                                height: 30,
+                                image: new AssetImage("assets/kousik.png"),
+                                width: 32,
+                                height: 32,
                                 color: null,
                                 //fit: BoxFit.scaleDown,
                                 alignment: Alignment.center,
@@ -665,13 +685,10 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                               ),
                             ),
                           ),
-                          // SizedBox(
-                          //   height: 10,
-                          //   width: 5,
-                          // ),
+
                           Text('Kousik S M',
-                            style: TextStyle(fontSize: 10,
-                                fontWeight: FontWeight.bold),),
+                            style: TextStyle(fontSize: 10, fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400, height: 1),),
 
                         ],
                       ),
@@ -681,19 +698,20 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                         children: <Widget>[
                           SizedBox(
                             //height: 10,
-                            width: 20,
+                            width: 22,
                           ),
-                          Icon(Icons.star,size: 10,color: Colors.green,),
-                          Icon(Icons.star,size: 10,color: Colors.green,),
-                          Icon(Icons.star,size: 10,color: Colors.green,),
-                          Icon(Icons.star,size: 10,color: Colors.green,),
-                          Icon(Icons.star,size: 10,color: Colors.green,),
+                          Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
+                          Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
+                          Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
+                          Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
+                          Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
 
                           SizedBox(
                             //height: 10,
-                            width: 5,
+                            width: 2,
                           ),
-                          Text('01/07/2020', style:TextStyle(fontSize: 10,)),
+                          Text('01/07/2020', style:TextStyle(fontSize: 9, fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400, height: 1)),
 
 
                         ],
@@ -704,7 +722,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
 
                         padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 10),
                         child:  Container(
-                          padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 10),
+                          padding: const EdgeInsets.fromLTRB(15.0, 10, 10, 10),
                           decoration: BoxDecoration(
                             border: Border.all(color: Color(0xF6F6F6F6), width: 1),
                             borderRadius: BorderRadius.circular(05),
@@ -713,12 +731,15 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                           ),
                           child:Text(
                             'Thats an amazing chat with you maam, Thanks maam. You are thebest on portal, people should consult you. The more I talk to you, the more I feel better.',style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.black,
+                              fontSize: 9,
+                              color: Colors.black,fontFamily: 'Inter',
+                              fontWeight: FontWeight.w400, height: 1.1
                           ), //Textstyle
                           ),
                         ),
                       ),
+
+
 
 
                       Column(
@@ -738,9 +759,9 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(5), // Border radius
                                   child: ClipOval(child:   Image(
-                                    image: new AssetImage("assets/rajiv.PNG"),
-                                    width: 30,
-                                    height: 30,
+                                    image: new AssetImage("assets/Ellipse 92.png"),
+                                    width: 32,
+                                    height: 32,
                                     color: null,
                                     //fit: BoxFit.scaleDown,
                                     alignment: Alignment.center,
@@ -753,8 +774,8 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                               //   width: 5,
                               // ),
                               Text('Namitha Dutta',
-                                style: TextStyle(fontSize: 10,
-                                    fontWeight: FontWeight.bold),),
+                                style: TextStyle(fontSize: 10, fontFamily: 'Inter',
+                                    fontWeight: FontWeight.w400, height: 1),),
 
                             ],
                           ),
@@ -766,16 +787,18 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                                 //height: 10,
                                 width: 20,
                               ),
-                              Icon(Icons.star,size: 10,color: Colors.green,),
-                              Icon(Icons.star,size: 10,color: Colors.green,),
-                              Icon(Icons.star,size: 10,color: Colors.green,),
-                              Icon(Icons.star,size: 10,color: Colors.green,),
-                              Icon(Icons.star,size: 10,color: Colors.green,),
+                              Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
+                              Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
+                              Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
+                              Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
+                              Icon(Icons.star,size: 10,color: Color(0xFF00B41D),),
                               SizedBox(
                                 //height: 10,
-                                width: 5,
+                                width: 2,
                               ),
-                              Text('23/06/2020', style:TextStyle(fontSize: 10,)),
+                              Text('23/06/2020', style:TextStyle(fontSize: 9,
+                                  color: Colors.black,fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w400, height: 1.1)),
 
 
                             ],
@@ -786,7 +809,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
 
                             padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 10),
                             child:  Container(
-                              padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 10),
+                              padding: const EdgeInsets.fromLTRB(15.0, 10, 10, 10),
                               decoration: BoxDecoration(
                                 border: Border.all(color: Color(0xF6F6F6F6), width: 1),
                                 borderRadius: BorderRadius.circular(05),
@@ -795,8 +818,9 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                               ),
                               child:Text(
                                 'Thats an amazing chat with you maam, Thanks maam. You are thebest on portal, people should consult you. The more I talk to you, the more I feel better.',style: TextStyle(
-                                fontSize: 10,
-                                color: Colors.black,
+                                  fontSize: 9,
+                                  color: Colors.black,fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w400, height: 1.1
                               ), //Textstyle
                               ),
                             ),
@@ -810,7 +834,7 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
               ),
 
               SizedBox(
-                height:150,
+                height:140,
               ),
 
 
@@ -820,8 +844,17 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
         ),
       ),
       bottomSheet: Container(
-        color: Colors.white,
-        height: 150.0,
+
+        height: 140,
+        //height: MediaQuery.of(context).size.height*0.23,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(4),
+          color: Colors.white,
+          boxShadow: [new BoxShadow(
+            color: Color(0x40000000),
+            blurRadius: 3.0,
+          ),],
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -833,40 +866,46 @@ class _ChatVideoPlayerScreenState extends State<ChatVideoPlayerScreen> {
                   // mainAxisAlignment: MainAxisAlignment.center,
                   // mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    SizedBox(
-                      height:10,
-                    ),
+                    SizedBox(height: 5,),
                     const Text('Chat Consultation', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold,)),
-
-                    Padding(
-
-                      padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 10),
-                      child:  Container(
-                        padding: const EdgeInsets.fromLTRB(50.0, 15, 50, 15),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black12, width: 1),
-                          borderRadius: BorderRadius.circular(05),
-                          color: Colors.black12,
-                          //shape: BoxShape.circle,
-                        ),
-                        child:Text(
-                          'Rs. 5000 / Hour',style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold
-                        ), //Textstyle
-                        ),
+        SizedBox(height: 2,),
+                    Container(
+                      height: 70,
+                      width: MediaQuery.of(context).size.width*0.85,
+                      padding: const EdgeInsets.fromLTRB(10, 25, 10, 25),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Color(0xFFFFFFFF), width: 1),
+                        borderRadius: BorderRadius.circular(05),
+                        color: Color(0x80E5E5E5),
+                        //shape: BoxShape.circle,
                       ),
+                      child:Column(
+                        children: [
+                          Text(
+                            'Rs. 5000 / Hour',style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w800,fontFamily: 'Inter',height: 1
+                          ), //Textstyle
+                          ),
+                        ],
+                      ),
+
+
                     ),
+
                     SizedBox(
-                      height:0,
+                      height:2,
                     ),
                     ElevatedButton(
 
                       style: ElevatedButton.styleFrom(
                         primary: Colors.black, // background
                         onPrimary: Colors.white, // foreground
-                        padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                        padding: const EdgeInsets.fromLTRB(40, 13, 40, 13),
+                        shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(10.0),
+                        ),
                       ),
                       onPressed: () {
                         // Navigator.pop(context);

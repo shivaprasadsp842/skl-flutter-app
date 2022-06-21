@@ -23,7 +23,9 @@ class CheckAvailability extends StatelessWidget {
       home:Scaffold(
         backgroundColor: Color(0xFFF0F0F0),
     appBar: PreferredSize(
-    preferredSize: Size.fromHeight(25.0), // here the desired height
+    preferredSize: Size.fromHeight(35.0), // here the desired height
+    child:  Padding(
+    padding: EdgeInsets.all(5),
     child:  AppBar(
           backgroundColor: Color(0xFFF0F0F0),
           elevation: 0,
@@ -49,6 +51,7 @@ class CheckAvailability extends StatelessWidget {
           ),
        //  title: Text('Back'),
          centerTitle: false,
+        ),
         ),
         ),
         body: SingleChildScrollView(

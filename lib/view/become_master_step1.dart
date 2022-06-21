@@ -68,7 +68,7 @@ class _BecomeMasterStep1State extends State<BecomeMasterStep1> {
                   child: Container(
                     padding: const EdgeInsets.fromLTRB(25, 05, 25, 05),
                     child: Text(
-                      "Full Name (As per Bank Passbook",
+                      "Full Name (As per Bank Passbook)",
                       style: TextStyle(
                         fontSize: 12,
                         color: Colors.black,
@@ -118,7 +118,8 @@ class _BecomeMasterStep1State extends State<BecomeMasterStep1> {
 Row(
   children: [
     Container(
-      width: 290,
+      //width: 290,
+      width: MediaQuery.of(context).size.width*0.85,
       //height: 50,
       padding: const EdgeInsets.fromLTRB(25, 0, 10, 0),
       //  padding: const EdgeInsets.all(10),
@@ -202,7 +203,7 @@ Row(
           Row(
             children: [
               Container(
-                  width: 290,
+                width: MediaQuery.of(context).size.width*0.85,
                // height: 60,
                   padding: const EdgeInsets.fromLTRB(25, 05, 10, 05),
                   child: TextField(
@@ -257,7 +258,7 @@ Row(
           Row(
               children: [
                 Container(
-                  width: 290,
+                  width: MediaQuery.of(context).size.width*0.85,
                 //  height: 60,
                   padding: const EdgeInsets.fromLTRB(25, 05, 10, 05),
                   child: TextField(
@@ -329,12 +330,12 @@ Row(
                         ),
                       ),
                       onPressed: () {
-                       become_master();
-                       //  Navigator.push(
-                       //    context,
-                       //    MaterialPageRoute(
-                       //        builder: (context) => BecomeMasterStep2()),
-                       //  );
+                      // become_master();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BecomeMasterStep2()),
+                        );
                       },
                       child: const Text(
                         'NEXT (1/2)',

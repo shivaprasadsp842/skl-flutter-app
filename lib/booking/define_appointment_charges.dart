@@ -23,7 +23,7 @@ class DefineAppointmentCharges extends StatelessWidget {
     appBar:PreferredSize(
     preferredSize: Size.fromHeight(35.0), // here the desired height
     child:Padding(
-    padding: const EdgeInsets.all(5),
+      padding: EdgeInsets.fromLTRB(5,15,0,5),
     child:   AppBar(
 
             backgroundColor:Color(0xFFF0F0F0),

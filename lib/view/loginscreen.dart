@@ -36,8 +36,9 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(MediaQuery.of(context).size.height * 0.48), // here the desired height
+          preferredSize: Size.fromHeight(MediaQuery.of(context).size.height * 0.46), // here the desired height
           child:  AppBar(
+
             leading: InkWell(
               onTap: () {
                 // Navigator.push(
@@ -51,35 +52,60 @@ class _LoginViewState extends State<LoginView> {
                 color: Colors.black,
               ),
             ),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.red,
             elevation: 0,
             title: Text(''),
             //Text('How it works?'),
             flexibleSpace: Container(
               color: Colors.black,
               padding: const EdgeInsets.all(0),
-              height: MediaQuery.of(context).size.height * 0.58,
+              height: MediaQuery.of(context).size.height * 0.56,
              child: Column(
                 children: [
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-                  Image(
-                    image: new AssetImage("assets/undraw_vr_chat_re_s80u 1 (1).png"),
-                    height: MediaQuery.of(context).size.height * 0.3,
-               //   width: double.infinity,
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.08),
+
+              SizedBox(height: MediaQuery.of(context).size.height * 0.24,
+              child:Image(
+                    image: new AssetImage("assets/logoiat.PNG"),
+                    height: MediaQuery.of(context).size.height * 1.0,
+                 width: double.infinity,
                    fit: BoxFit.cover,
                   ),
+                  ),
+                  SizedBox(height: 10,),
+                  Center(
+                    child: const Text(
+                      'Directly Contact Youtubers,',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600, fontFamily: 'Inter'),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                      Center(
+                    child: const Text(
+                      'Founders & Experts ',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600, fontFamily: 'Inter'),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                      Center(
+                    child: const Text(
+                      'Online/Offline',
+                      style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600, fontFamily: 'Inter'),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
 
-                  Container(
-                      alignment: Alignment.center,
-                      padding: const EdgeInsets.fromLTRB(20, 20, 20,0),
-                      child: const Text(
-                        'Directly Contact Youtubers, Founders & Experts Online/Offline',
-                        style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600, fontFamily: 'Inter'),
-                        textAlign: TextAlign.center,
-                      ),
-                      ),
+                  // Container(
+                  //     alignment: Alignment.center,
+                  //     padding: const EdgeInsets.fromLTRB(30, 15, 30,00),
+                  //     child: const Text(
+                  //       'Directly Contact Youtubers, Founders & Experts Online/Offline',
+                  //       style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600, fontFamily: 'Inter'),
+                  //       textAlign: TextAlign.center,
+                  //     ),
+                  //     ),
 
-                     Icon(Icons.more_horiz, color: Colors.white, size: 23,),
+                     Icon(Icons.more_horiz, color: Colors.white, size: 20,),
 
                ],
               ),

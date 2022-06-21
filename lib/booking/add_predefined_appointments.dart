@@ -22,9 +22,11 @@ class AddPredefinedViews extends StatelessWidget {
       home:Scaffold(
 
         backgroundColor:  Color(0xFFF0F0F0),
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(35.0), // here the desired height
-          child:  AppBar(
+    appBar: PreferredSize(
+    preferredSize: Size.fromHeight(40.0), // here the desired height
+    child:  Padding(
+    padding: EdgeInsets.fromLTRB(5, 10, 0, 010),
+    child: AppBar(
             //   backgroundColor: Color(0xFFEBBF8B),
             backgroundColor:Color(0xFFF0F0F0),
             elevation: 0,
@@ -63,6 +65,7 @@ class AddPredefinedViews extends StatelessWidget {
             ),
             // Icon(Icons.settings,color: Colors.black54,),
           ),
+        ),
         ),
         body: SingleChildScrollView(
           child: IntrinsicHeight(
@@ -141,18 +144,6 @@ class _AddPredefinedCheckStatefulViewState extends State<AddPredefinedCheckState
   }
 
 
-// //  Price
-//
-//   String? dropdownValuePrice = 'RUPEES - (Rs.)';
-//   List<String> dropdownItemsPrice = <String>[
-//     'RUPEES - (Rs.)',
-//     '300',
-//     '400',
-//     '500',
-//     "600",
-//     "700"
-//   ];
-
   PickedFile? imageFile=null;
   Future<void>_showChoiceDialog(BuildContext context)
   {
@@ -197,7 +188,7 @@ class _AddPredefinedCheckStatefulViewState extends State<AddPredefinedCheckState
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                SizedBox(height: 20,),
+                SizedBox(height: 10,),
                 Stack(
                   children: <Widget>[
                     Container(

@@ -125,13 +125,14 @@ class CheckRecharge extends StatelessWidget {
         //  color: Colors.black,
       ),
       body: SlidingUpPanel(
-       // backdropEnabled: true,
+        minHeight: MediaQuery.of(context).size.height*0.6,
+        maxHeight: MediaQuery.of(context).size.height*0.8,
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20.0),
             topRight: Radius.circular(20.0)),
         panel: Container(
-          padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-          height: MediaQuery.of(context).size.height*0.5,
+          padding: const EdgeInsets.fromLTRB(5, 0, 5, 10),
+          height: MediaQuery.of(context).size.height*0.55,
           width:double.infinity,
           decoration: BoxDecoration(
               border: Border.all(color: Colors.white70, width: 1),
@@ -172,11 +173,11 @@ class CheckRecharge extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.fromLTRB(26.0, 0, 20, 20),
                         child: Text(
-                          "banance !",
+                          "balance !",
                           style: TextStyle(fontFamily: 'Inter',
                             fontSize: 20,
                             color: Colors.black,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
@@ -185,7 +186,7 @@ class CheckRecharge extends StatelessWidget {
                     SizedBox(height:10,),
 
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
 
                       children: <Widget>[
                         SizedBox( width: 25,),
@@ -194,38 +195,65 @@ class CheckRecharge extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.w400,
                         ),),
-                        SizedBox(width: 100,),
+                        SizedBox(width: MediaQuery.of(context).size.width*0.35,),
                         Text('Rs. 0.00', style: TextStyle(fontFamily: 'Inter',color:Colors.red, fontSize: 15, fontWeight: FontWeight.w700)),
                       ],
                     ),
+
+
                     SizedBox(height:10,),
-                    Divider(
-                      height: 10,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 2,
-                      color: Colors.black,
-                     // color: Color(0xFFC4C4C4),
-                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 5),
+                      child:Container(
+                        height:1,
+
+                        width: MediaQuery.of(context).size.width*0.85,
+                        color: Color(0xFFC4C4C4),
+                      ),
+                      ),
+                    // Divider(
+                    //   height: 10,
+                    //   thickness: 2,
+                    //   indent: 20,
+                    //   endIndent: 2,
+                    //  // color: Colors.black,
+                    //  color: Color(0xFFC4C4C4),
+                    // ),
+
                     SizedBox(height:10,),
                     Padding(
 
-                      padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 15),
+                      padding: const EdgeInsets.fromLTRB(15.0, 10, 10, 15),
                       child:  Container(
-                          width: MediaQuery.of(context).size.width*0.8,
-                          height: MediaQuery.of(context).size.height*0.3,
-                        padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 100),
+                          width: MediaQuery.of(context).size.width*0.85,
+                          height: MediaQuery.of(context).size.height*0.26,
+                        padding: const EdgeInsets.fromLTRB(20.0, 10, 10, 10),
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.white70, width: 1),
                           borderRadius: BorderRadius.circular(10),
                           color: Color(0xF6F6F6F6),
                           //shape: BoxShape.circle,
                         ),
-                        child:Text(
-                          'That’s not a issue. Now you can recharge your wallet with combo offers & can continue your conversation. ',style: TextStyle(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                        Text(
+                          'That’s not a issue. ',style: TextStyle(
                           fontSize: 13,fontFamily: 'Inter',
-                          color: Colors.black,fontWeight: FontWeight.w500, height: 1.3,
+                          color: Colors.black87,fontWeight: FontWeight.w600, height: 1.3,
                         ), //Textstyle
+                        ),
+                           Text(
+                          'Now you can recharge your wallet with combo offers & can continue your conversation. ',style: TextStyle(
+                          fontSize: 13,fontFamily: 'Inter',
+                          color: Colors.black87,fontWeight: FontWeight.w600, height: 1.3,
+                        ), //Textstyle
+                        ),
+
+
+
+                        ]
                         ),
                       ),
                     ),
@@ -233,7 +261,9 @@ class CheckRecharge extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         SizedBox(height:10,width:20,),
-                        ElevatedButton(
+                        Container(
+                          width: MediaQuery.of(context).size.width*0.3,
+                          child:ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             primary: Colors.white, // background
                             onPrimary: Colors.white, // foreground
@@ -253,8 +283,12 @@ class CheckRecharge extends StatelessWidget {
                             ),),
                           onPressed: () => Navigator.pop(context),
                         ),
+                        ),
+
                         SizedBox(height:10,width:10,),
-                        ElevatedButton(
+                        Container(
+                          width: MediaQuery.of(context).size.width*0.55,
+                          child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             primary: Colors.black, // background
                             onPrimary: Colors.white, // foreground
@@ -277,6 +311,7 @@ class CheckRecharge extends StatelessWidget {
                             ),
                           ),
 
+                        ),
                         ),
                       ],
                     ),

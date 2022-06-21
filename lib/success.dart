@@ -90,7 +90,7 @@ class _SuccessFullState extends State<SuccessFull> {
       ClipPath(
         clipper: MultiplePointsClipper(Sides.BOTTOM, heightOfPoint: 20),
         child: Container(
-            height: MediaQuery.of(context).size.height*0.18,
+            height: MediaQuery.of(context).size.height*0.19,
 
             padding: EdgeInsets.all(20),
           color: Color(0xFF7DD8B7),
@@ -396,47 +396,47 @@ class _SuccessFullState extends State<SuccessFull> {
             ],
           ),
       SizedBox(height: 15),
-     Stack(
-       children: [
+      Stack(
+        children: [
 
-         Padding(
-           padding: const EdgeInsets.fromLTRB(0, 90, 0, 0),
-         child:
-         Container(
-           height: 20,
-           width: double.infinity,
-           color:  Color(0xFF7DD8B7),
-           padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
-         ),
-         ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 90, 0, 0),
+            child:
+            Container(
+              height: 20,
+              width: double.infinity,
+              color:  Color(0xFF7DD8B7),
+              padding: const EdgeInsets.fromLTRB(0, 200, 0, 0),
+            ),
+          ),
 
-         Padding(
-           padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-           child:ClipPath(
-           clipper: MultiplePointsClipper(Sides.VERTICAL, heightOfPoint: 20),
-           child: Container(
-             height: 100,
-             //padding: const EdgeInsets.fromLTRB(0, 140, 0, 0),
-             color: Color(0xFF7DD8B7),
-             alignment: Alignment.center,
-             child: Text(
-               '',
-               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-             ),
-           ),
-         ),
-         ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+            child:ClipPath(
+              clipper: MultiplePointsClipper(Sides.VERTICAL, heightOfPoint: 20),
+              child: Container(
+                height: 100,
+                //padding: const EdgeInsets.fromLTRB(0, 140, 0, 0),
+                color: Color(0xFF7DD8B7),
+                alignment: Alignment.center,
+                child: Text(
+                  '',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
 
-         // Container(
-         //   height: 20,
-         //   width: double.infinity,
-         //   color: Colors.red,
-         //   padding: const EdgeInsets.fromLTRB(0, 140, 0, 10),
-         // ),
-         SizedBox(height: 20,),
+          // Container(
+          //   height: 20,
+          //   width: double.infinity,
+          //   color: Colors.red,
+          //   padding: const EdgeInsets.fromLTRB(0, 140, 0, 10),
+          // ),
+          //SizedBox(height: 20,),
 
-       ],
-     )
+        ],
+      ) ,
 
 
 
@@ -445,6 +445,10 @@ class _SuccessFullState extends State<SuccessFull> {
         ),
 
     ),
+      // bottomSheet: Container(
+      //   color: Colors.white,
+      //   child:
+      // ),
     );
 
   }

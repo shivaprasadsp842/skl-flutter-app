@@ -31,14 +31,24 @@ dependencies:
   custom_clippers: ^1.0.0
   rolling_switch: ^0.0.2
   dropdown_button2: ^1.4.0
+  bubble: ^1.2.1
+  flutter_launcher_icons: ^0.9.3
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#000000"
+  adaptive_icon_foreground: "assets/icon/foreground.png"
 
-#  international_phone_input: ^1.0.4
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+
+
 #    image_form_field: ^0.1.0
  #video_player:
 

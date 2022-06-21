@@ -19,7 +19,9 @@ class BookingChatConsultant extends StatelessWidget {
 
        backgroundColor: Color(0xFFF0F0F0),
     appBar: PreferredSize(
-    preferredSize: Size.fromHeight(20.0), // here the desired height
+    preferredSize: Size.fromHeight(40.0), // here the desired height
+    child:   Padding(
+    padding: EdgeInsets.fromLTRB(5, 10, 0, 5),
     child:   AppBar(
 
           // leading: InkWell(
@@ -72,6 +74,7 @@ class BookingChatConsultant extends StatelessWidget {
               ),
             ),
           ),
+        ),
         ),
         ),
         body: SingleChildScrollView(

@@ -20,7 +20,9 @@ class AllBookingAppointment extends StatelessWidget {
       home:Scaffold(
         backgroundColor:  Color(0xFFEBBF8B),
         appBar: PreferredSize(
-        preferredSize: Size.fromHeight(25.0), // here the desired height
+        preferredSize: Size.fromHeight(38.0), // here the desired height
+    child:  Padding(
+    padding: EdgeInsets.fromLTRB(5, 5, 0, 5),
     child:  AppBar(
        //   backgroundColor: Color(0xFFEBBF8B),
           backgroundColor:Color.fromRGBO(235, 191, 139, 1),
@@ -61,6 +63,7 @@ class AllBookingAppointment extends StatelessWidget {
               // Icon(Icons.settings,color: Colors.black54,),
         ),
         ),
+        ),
         body: SingleChildScrollView(
           child: IntrinsicHeight(
             child: BookingCheckStateful(),
@@ -86,9 +89,9 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
         child: IntrinsicHeight(
           child:  Container(
             color: Color(0xFFE7CC86),
-       // padding: const EdgeInsets.fromLTRB(10, 0, 10, 05),
-    child:
-    Column(
+
+            child:
+           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
 
@@ -110,6 +113,27 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
+
+               // ListView.builder(
+               //        shrinkWrap: true,
+               //        itemCount: 2,
+               //        itemBuilder: (context, index){
+               //          return Column(
+               //            mainAxisAlignment: MainAxisAlignment.start,
+               //            crossAxisAlignment: CrossAxisAlignment.start,
+               //            children: <Widget>[
+               //
+               //              Container(
+               //                width: 10,
+               //                height: 10,
+               //                color: Colors.red,
+               //              )
+               //            ],
+               //          );
+               //        }
+               //    ),
+
+
 
 
               Align(
@@ -135,7 +159,7 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
           child:Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
-            ),
+              ),
                   color: Colors.white,
                   child:   Padding(
                     padding: EdgeInsets.all(7.0),
@@ -150,7 +174,10 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                             alignment: Alignment.center,
                           ),
                           SizedBox(width: 8,),
-                          Column(
+
+                        Container(
+                          width: MediaQuery.of(context).size.width*0.3,
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           //  mainAxisSize: MainAxisSize.min,
@@ -260,12 +287,18 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                                 ),
                               ),
                             ],
+                          ),
                           )
                           ],
                     ),
               ),
               ),
               ),
+
+
+
+
+
 
               Align(
                 alignment: Alignment.centerLeft,
@@ -305,7 +338,10 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                             alignment: Alignment.center,
                           ),
                           SizedBox(width: 8,),
-                          Column(
+
+            Container(
+              width: MediaQuery.of(context).size.width*0.3,
+              child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           //  mainAxisSize: MainAxisSize.min,
@@ -415,6 +451,7 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                                 ),
                               ),
                             ],
+                          ),
                           )
                           ],
                     ),
@@ -460,7 +497,9 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                             alignment: Alignment.center,
                           ),
                           SizedBox(width: 8,),
-                          Column(
+            Container(
+              width: MediaQuery.of(context).size.width*0.3,
+              child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           //  mainAxisSize: MainAxisSize.min,
@@ -571,6 +610,7 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                               ),
                             ],
                           )
+                          )
                           ],
                     ),
               ),
@@ -615,7 +655,9 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                             alignment: Alignment.center,
                           ),
                           SizedBox(width: 8,),
-                          Column(
+            Container(
+              width: MediaQuery.of(context).size.width*0.3,
+              child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           //  mainAxisSize: MainAxisSize.min,
@@ -726,6 +768,7 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                               ),
                             ],
                           )
+                          ),
                           ],
                     ),
               ),
@@ -770,7 +813,9 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                             alignment: Alignment.center,
                           ),
                           SizedBox(width: 8,),
-                          Column(
+            Container(
+              width: MediaQuery.of(context).size.width*0.3,
+              child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           //  mainAxisSize: MainAxisSize.min,
@@ -880,6 +925,7 @@ class _BookingCheckStatefulState extends State<BookingCheckStateful> {
                                 ),
                               ),
                             ],
+                          )
                           )
                           ],
                     ),

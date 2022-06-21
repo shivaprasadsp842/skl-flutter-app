@@ -23,9 +23,11 @@ class BookingAppointmentView extends StatelessWidget {
       home:Scaffold(
         extendBodyBehindAppBar: true,
         backgroundColor: Color(0xFFF0F0F0),
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(20.0), // here the desired height
-          child:  AppBar(
+    appBar: PreferredSize(
+    preferredSize: Size.fromHeight(35.0), // here the desired height
+    child:  Padding(
+    padding: EdgeInsets.all(5),
+    child:  AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
             flexibleSpace: SafeArea(
@@ -62,6 +64,7 @@ class BookingAppointmentView extends StatelessWidget {
               ),
             ),
           ),
+        ),
         ),
         body: SingleChildScrollView(
           child: IntrinsicHeight(

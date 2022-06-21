@@ -277,135 +277,136 @@ class _BecomeMasterStep2State extends State<BecomeMasterStep2> {
                       ),
                     ),
                   ),
-                  // SizedBox(
-                  //   height: 260,
-                  // ),
+                  SizedBox( height: MediaQuery.of(context).size.height*0.25,),
 
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(width: 30,),
+                      Theme(
+                        child:Checkbox(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          checkColor: Colors.white,
+                          // fillColor: MaterialStateProperty.resolveWith(getColor),
+                          value: isChecked,
+                          onChanged: (bool? value) {
+                            setState(() {
+                              isChecked = value!;
+                            });
+                            print(isChecked);
+                          },
+                        ),
+                        data: ThemeData(
+                          primarySwatch: Colors.blue,
+                          unselectedWidgetColor: Color(0xFF0067FA), // Your color
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          padding: const EdgeInsets.fromLTRB(0, 10, 45, 10),
+                          child: Text(
+                            "Yes, I Agree to all Terms & Conditions", style: TextStyle(
+                            fontSize: 12,
+                            color: Color(0xFF0067FA),
+                            //fontWeight: FontWeight.bold,
+                          ),
+                          ),
+                        ),
+                      ),
+                      // Switch(
+                      //   value: isSwitched,
+                      //   activeColor: Colors.blue,
+                      //   onChanged: (value) {
+                      //     print("VALUE : $value");
+                      //     setState(() {
+                      //       isSwitched = value;
+                      //     });
+                      //   },
+                      // ),
+
+
+                    ],
+                  ),
+
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      //decoration: const BoxDecoration(color: Colors.black),
+                      margin: EdgeInsets.all(0.0),
+                      // padding: EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        // color:Colors.white,
+                      ),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.black, // background
+                          onPrimary: Colors.white, // foreground
+                          padding: const EdgeInsets.fromLTRB(60, 15, 60, 15),
+                          shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(10.0),
+                          ),
+                        ),
+                        onPressed: () {
+                          //become_master();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Master()),
+                          );
+                        },
+                        child: const Text(
+                          'SUBMIT (2/2)',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      padding: const EdgeInsets.fromLTRB(25, 5, 45, 10),
+                      child: Text(
+                        "Send Profile For Verification", style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey,
+                        //fontWeight: FontWeight.bold,
+                      ),
+                      ),
+                    ),
+                  ),
 
                 ],
               ),
             ],
           )
       ),
-      bottomSheet: Container(
-        color: Colors.white54,
-        height: MediaQuery.of(context).size.height * 0.2,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(width: 30,),
-                Theme(
-                  child:Checkbox(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    checkColor: Colors.white,
-                    // fillColor: MaterialStateProperty.resolveWith(getColor),
-                    value: isChecked,
-                    onChanged: (bool? value) {
-                      setState(() {
-                        isChecked = value!;
-                      });
-                      print(isChecked);
-                    },
-                  ),
-                  data: ThemeData(
-                    primarySwatch: Colors.blue,
-                    unselectedWidgetColor: Color(0xFF0067FA), // Your color
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(0, 10, 45, 10),
-                    child: Text(
-                      "Yes, I Agree to all Terms & Conditions", style: TextStyle(
-                      fontSize: 12,
-                      color: Color(0xFF0067FA),
-                      //fontWeight: FontWeight.bold,
-                    ),
-                    ),
-                  ),
-                ),
-                // Switch(
-                //   value: isSwitched,
-                //   activeColor: Colors.blue,
-                //   onChanged: (value) {
-                //     print("VALUE : $value");
-                //     setState(() {
-                //       isSwitched = value;
-                //     });
-                //   },
-                // ),
 
-
-              ],
-            ),
-
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                //decoration: const BoxDecoration(color: Colors.black),
-                margin: EdgeInsets.all(0.0),
-                // padding: EdgeInsets.all(12.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  // color:Colors.white,
-                ),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.black, // background
-                    onPrimary: Colors.white, // foreground
-                    padding: const EdgeInsets.fromLTRB(60, 15, 60, 15),
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  onPressed: () {
-                    become_master();
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => Master()),
-                    // );
-                  },
-                  child: const Text(
-                    'SUBMIT (2/2)',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                padding: const EdgeInsets.fromLTRB(25, 5, 45, 10),
-                child: Text(
-                  "Send Profile For Verification", style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.grey,
-                  //fontWeight: FontWeight.bold,
-                ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        ),
+      // bottomSheet: Container(
+      //   color: Colors.white,
+      //   height: MediaQuery.of(context).size.height * 0.16,
+      //   child: Column(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: <Widget>[
+      //
+      //     ],
+      //   ),
+      //   ),
 
 
     );
   }
 
+// ===============================  Click On Save Button     ===============================
 
   platformUrl() async{
     String url = _urlController.text;
@@ -434,14 +435,13 @@ class _BecomeMasterStep2State extends State<BecomeMasterStep2> {
       );
 
     }
-
-
     else {
       var json = {
-        'tag': 'platform_url',
-        'platform':'$selectedplatformValues',
-        'url':'$url',
-        'user_id':'IAT-1'};
+                  'tag': 'platform_url',
+                  'platform':'$selectedplatformValues',
+                  'url':'$url',
+                  'user_id':'IAT-1'
+                  };
 
       print('this is json request : $json');
       Random random = new Random();
@@ -449,21 +449,29 @@ class _BecomeMasterStep2State extends State<BecomeMasterStep2> {
       var res = await _services.platform_url(json);
       print('this is response : $res');
 
+
+
+
       if (res["status"] == 1) {
         if(res["message"]=='Platform And Url Added!')
         {
           print('Platform And Url Added');
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => Master()),
-          // );
+          Fluttertoast.showToast(
+              msg: '${res["message"]}',
+              toastLength: Toast.LENGTH_LONG,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 4,
+              backgroundColor: Colors.green,
+              textColor: Colors.white,
+              fontSize: 16.0
+          );
         }
         else {
 
         }
       }
       else {
-        Fluttertoast.showToast(
+            Fluttertoast.showToast(
             msg: '${res["message"]}',
             toastLength: Toast.LENGTH_LONG,
             gravity: ToastGravity.BOTTOM,
@@ -476,6 +484,9 @@ class _BecomeMasterStep2State extends State<BecomeMasterStep2> {
     }
 
   }
+
+
+  // ==================== Click On  Submit Button   ===============================
 
   become_master() async{
     String url = _urlController.text;
@@ -538,6 +549,7 @@ class _BecomeMasterStep2State extends State<BecomeMasterStep2> {
       if (res["status"] == 1) {
         if(res["message"]=='Congratulations!')
         {
+          // send the passing master data into Master Class
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => Master()),

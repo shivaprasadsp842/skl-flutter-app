@@ -187,7 +187,7 @@ class _DefineLeaveQuestionState extends State<DefineLeaveQuestion> {
      appBar: PreferredSize(
      preferredSize: Size.fromHeight(35.0), // here the desired height
      child: Padding(
-     padding: EdgeInsets.all(5),
+     padding: EdgeInsets.fromLTRB(5,15,0,5),
      child: AppBar(
      leading: InkWell(
      onTap: () {
