@@ -8,6 +8,7 @@ import 'package:furniture_ui/network/services.dart';
 import 'package:furniture_ui/view/homescreen.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
+import '../users.dart';
 import 'otp_screen.dart';
 final Services _services = Services();
 
@@ -264,11 +265,11 @@ class _LoginViewState extends State<LoginView> {
                         //  onPressed: getData,
 
                           onPressed: (){
-                            callSignUp();
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(builder: (context) => Otp()),
-                            // );
+                             callSignUp();
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => HomeView()),
+                            );
                           },
                         ),
 
@@ -348,7 +349,8 @@ class _LoginViewState extends State<LoginView> {
   //           });
   // }
   callSignUp() async{
-    if(numberController.text.isEmpty || numberController.text.length!=10){
+    String number = numberController.text;
+    if(number.isEmpty || number.length!=10){
       Fluttertoast.showToast(
           msg: 'Please Enter Vaild Phone Number',
           toastLength: Toast.LENGTH_LONG,
@@ -360,7 +362,7 @@ class _LoginViewState extends State<LoginView> {
       );
     //  print("hello");
     }else {
-      var json = {"tag": "signup", "phone_no": '${numberController.text}'};
+      var json = {"tag": "signup", "phone_no": '${number}'};
       print('this is json request : $json');
       Random random = new Random();
       int randomNumber = random.nextInt(100);
@@ -368,19 +370,33 @@ class _LoginViewState extends State<LoginView> {
       print('this is response : $res');
 
       if (res["status"] == 1) {
+
+        List<User> list = res['search'];
         if(res["message"]=='Logged in!')
           {
 
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HomeView()),
+              MaterialPageRoute(builder: (context) => HomeView(number:{number})),
             );
           }
         else {
           Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Otp()),
-          );
+              context,
+              MaterialPageRoute(builder: (context) => DetailScreen(number:{number})),
+              );
+          // showDialog(
+          //   context: context,
+          //   builder: (context) {
+          //     return AlertDialog(
+          //       // Retrieve the text the that user has entered by using the
+          //       // TextEditingController.
+          //       content: Text(number),
+          //     );
+          //   },
+          // );
+
+
         }
       }
       else {

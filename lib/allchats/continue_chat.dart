@@ -368,7 +368,7 @@ class _ContinueChatState extends State<ContinueChat> {
                     alignment: Alignment.center,
                     child: Container(
 
-                      padding: const EdgeInsets.fromLTRB(0, 10, 00, 10),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 00, 0),
                       child: Text(
                         "Add a comment", style: TextStyle(
                         fontSize: 15,
@@ -429,7 +429,7 @@ class _ContinueChatState extends State<ContinueChat> {
                         ),
                       ),
                       onPressed: showToast,
-                      child: const Text('Add A Comment',
+                      child: const Text('Add ',
                         style: TextStyle(
                           color:Colors.white,
                           fontSize:13,

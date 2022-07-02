@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,9 @@ import 'myprofile.dart';
 final Services _services = Services();
 
 class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+  final number;
+
+  const HomeView({Key? key, this.number}) : super(key: key);
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -33,6 +36,7 @@ class _HomeViewState extends State<HomeView> {
   TextEditingController searchController = TextEditingController();
   List masterList = [];
   List searchList = [];
+  late List<User> userList;
 
   bool viewVisible = true ;
 
@@ -460,7 +464,7 @@ class _HomeViewState extends State<HomeView> {
                                               SizedBox(
                                                 height: 4,
                                               ),
-                                              // Text(searchList[index].name.toString(),
+                                              // Text(searchList[index].name,
                                               //   style: TextStyle(fontFamily: 'Inter',
                                               //       fontSize: 20, fontWeight: FontWeight.w700),
                                               // ),

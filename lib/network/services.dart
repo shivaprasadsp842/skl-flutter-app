@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart';
 
 final Map<String, String> headers = {"Access-Control-Allow-Origin": "*"};
+//final String url ='http://192.168.0.19/inalltime_api/inalltime_api/';
 final String url ='http://inalltime.skltechnologies.com/api/';
 final String imageUrl ='http://inalltime.skltechnologies.com/api/images/';
 
@@ -16,14 +17,14 @@ class Services{
 
   }
 
-  login(request) async{
-
-    print('this is the request sending for login : $request');
-    Response response = await post(Uri.parse('${url}login.php'),headers: headers, body: request );
-    var result =json.decode(response.body);
-    return result;
-
-  }
+  // login(request) async{
+  //
+  //   print('this is the request sending for login : $request');
+  //   Response response = await post(Uri.parse('${url}login.php'),headers: headers, body: request );
+  //   var result =json.decode(response.body);
+  //   return result;
+  //
+  // }
 
   search_master(request) async{
 

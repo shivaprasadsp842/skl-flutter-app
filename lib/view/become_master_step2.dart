@@ -16,6 +16,7 @@ class BecomeMasterStep2 extends StatefulWidget {
   final  number ;
   final  email ;
   final  otp ;
+
    BecomeMasterStep2({Key? key, this.name, this.number, this.email, this.otp}) : super(key: key);
 
   @override

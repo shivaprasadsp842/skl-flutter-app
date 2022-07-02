@@ -19,7 +19,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   }
   List<ChatMessage> messages = [
     ChatMessage(messageContent: "Hi sir, My name Rajiv Talreja, I want to ask some questions regarding my education, Can i take 30 minutes of your time. Please...", messageType: "receiver"),
-    // ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
+    ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
     // ChatMessage(messageContent: "Hey Kriss, I am doing fine dude. wbu?", messageType: "sender"),
     // ChatMessage(messageContent: "ehhhh, doing OK.", messageType: "receiver"),
     // ChatMessage(messageContent: "Is there any thing wrong?", messageType: "sender"),
@@ -106,10 +106,11 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                 ),
                 SizedBox(width: 2,),
                 CircleAvatar(
-                  backgroundImage: NetworkImage("<https://randomuser.me/api/portraits/men/5.jpg>"),
+                  backgroundImage: AssetImage("assets/userImage1.png"),
                   maxRadius: 20,
                 ),
                 SizedBox(width: 12,),
+
                 Padding(
                   padding: EdgeInsets.only(left: 00, right: 0, top: 0, bottom:0),
                   child: Row(

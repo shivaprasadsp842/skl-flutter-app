@@ -940,7 +940,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
           bottomSheet: Container(
           //color: Colors.white,
-              height: MediaQuery.of(context).size.height*0.23,
+              height: MediaQuery.of(context).size.height*0.225,
             decoration: BoxDecoration(
              borderRadius: BorderRadius.circular(4),
               color: Colors.white,
@@ -970,9 +970,9 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
                             Padding(
 
-                              padding: const EdgeInsets.fromLTRB(20.0, 3, 10, 0),
+                              padding: const EdgeInsets.fromLTRB(20.0, 3, 20, 0),
                               child:  Container(
-                                width: MediaQuery.of(context).size.width*0.9,
+                                width: MediaQuery.of(context).size.width*0.85,
                                 height: 60,
                                 padding: const EdgeInsets.fromLTRB(50.0, 20, 50, 15),
                                 decoration: BoxDecoration(
@@ -992,7 +992,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(height:2,),
+                            SizedBox(height:5,),
                             ElevatedButton(
 
                               style: ElevatedButton.styleFrom(

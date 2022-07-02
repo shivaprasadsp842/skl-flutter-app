@@ -1,11 +1,10 @@
 
 class User{
-
-  String id;
-  String name;
-  String phone_no;
-  String image;
-  String wallet_amount;
+ final String id;
+ final String name;
+ final String phone_no;
+ final String image;
+ final String wallet_amount;
 
   User({required this.id,
     required this.name,
@@ -20,11 +19,11 @@ class User{
   {
     return User(
 
-      id: json['consultant_id'] as String,
-      name: json['name'] as String,
-      phone_no: json['phone_no'] as String,
-      image: json['profile_image'] as String,
-      wallet_amount: json['wallet_amount'] as String,
+      id: json['consultant_id'],
+      name: json['name'],
+      phone_no: json['phone_no'],
+      image: 'http://inalltime.skltechnologies.com/api/images/'+ json['profile_image'],
+      wallet_amount: json['wallet_amount'],
     );
   }
 }

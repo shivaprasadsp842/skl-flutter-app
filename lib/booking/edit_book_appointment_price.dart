@@ -946,7 +946,7 @@ class _BookVideoPlayerScreenState extends State<BookVideoPlayerScreen> {
           bottomSheet: Container(
           //    color: Colors.white,
               //height: MediaQuery.of(context).size.height*0.3,
-              height: 205,
+              height: 210,
 
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 00),
             child:
@@ -1016,7 +1016,7 @@ class _BookVideoPlayerScreenState extends State<BookVideoPlayerScreen> {
                             ),
                             const Text('Book A Direct Appointment', style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, fontFamily: 'Inter')),
                             SizedBox(
-                              height:5,
+                              height:3,
                             ),
 
                             Padding(
